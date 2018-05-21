@@ -1,0 +1,22 @@
+#starsBox {
+	/* [disabled]position: absolute; */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* [disabled]background-color: rgba(0, 0, 0, 0.75); */
+	opacity: .5;
+	width: 100vw;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	display: inline-block;
+}
+#starsBox span {
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  border-radius: 100%;
+  transition: 100s linear;
+}

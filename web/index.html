@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+ <link rel="icon" href="favicon.ico">     
+      
+ <title>LETSPAY MGM抽獎活動</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link href="css/hover.css" rel="stylesheet" media="all">
+<link href="css/layout.css" type="text/css" rel="stylesheet" />
+
+<script src="js/mobile-detect.min.js"></script>
+<script src="js/fd.comp.oldBrowserAlert.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/global.js"></script>
+<script src='js/hhSwipe.js'></script>
+
+	
+<!-- End Vpadn Analytics Menu收合區塊 Jquery碼 -->
+<script>
+        $(document).ready(function(){
+            $(".menubar1").click(function () {
+                $(".menu").slideDown("slow");
+				$(".menubar2").show();
+				$(".menubar1").hide();	$('html,body').animate({scrollTop:$('#1').offset().top}, 1500); //代表一個完整的執行區塊});
+         });
+		 });
+	
+	$(document).ready(function(){
+            $(".menubar2").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#2').offset().top}, 1500); //代表一個完整的執行區塊});
+         });
+		 });
+    </script>
+    
+   <!-- 點選後關閉 Menu收合區塊 Jquery碼 -->
+<script>
+	$(document).ready(function(){
+            $(".menu1").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#s1m').offset().top}, 1000); //代表一個完整的執行區塊});
+         });
+		 });
+        $(document).ready(function(){
+            $(".menu2").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#s2m').offset().top}, 1000); //代表一個完整的執行區塊});
+         });
+		 });
+	
+	$(document).ready(function(){
+            $(".menu3").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#s3m').offset().top}, 1000); //代表一個完整的執行區塊});
+         });
+		 });
+	
+	$(document).ready(function(){
+            $(".menu4").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#s4m').offset().top}, 1000); //代表一個完整的執行區塊});
+         });
+		 });
+	
+	$(document).ready(function(){
+            $(".menu5").click(function () {
+                $(".menu").slideUp("hide");
+				$(".menubar1").show();
+				$(".menubar2").hide();	$('html,body').animate({scrollTop:$('#s5m').offset().top}, 1000); //代表一個完整的執行區塊});
+         });
+		 });
+    </script> 
+    
+
+
+<!-- End Vpadn Analytics NEW收合區塊 Jquery碼 -->
+<script>
+        $(document).ready(function(){
+            $(".notes1").click(function () {
+                $(".txt1").slideDown("slow");
+				$(".notes1").hide();
+				$(".notes2").show();
+	$('html,body').animate({scrollTop:$('#1').offset().top}, 1500); //代表一個完整的執行區塊});
+         });
+		 });
+	
+	$(document).ready(function(){
+            $(".notes2").click(function () {
+                $(".txt1").slideUp("hide");
+				$(".notes1").show();
+			    $(".notes2").hide();	$('html,body').animate({scrollTop:$('#2').offset().top}, 1500); //代表一個完整的執行區塊});
+         });
+		 });
+    </script>
+    
+    
+    
+
+<script>
+/*注意事項控制*/
+function showHide() {
+	var ele = document.getElementById("infobox");
+		ele2 = document.getElementById("infobox2");
+		if(ele.style.display == "block") {
+			ele.style.display = "none";
+		}
+		else {
+			ele.style.display = "block";
+		}
+}
+/*線上服務協議控制*/
+function showHide2() {
+	var ele = document.getElementById("agreement");
+		if(ele.style.display == "block") {
+			ele.style.display = "none";
+		}
+		else {
+			ele.style.display = "block";
+		}
+}
+
+
+
+/*gotop*/
+$(function(){
+    $(".gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300){
+            $('.gotop').fadeIn("fast");
+        } else {
+            $('.gotop').stop().fadeOut("fast");
+        }
+    });
+});
+</script>
+<script>
+	$(window).scroll(function() {
+		$('#animatedElement').each(function(){
+		var imagePos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("slideUp");
+			}
+		});
+	});
+</script>
+<!-- 滑動至錨點 Jquery碼 -->
+<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109454817-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'UA-109454817-1');
+</script>
+	
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '371902646606975');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=371902646606975&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->	
+
+	<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '371902646606975');
+  fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=371902646606975&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+	
+	
+	
+<!-- YAHOO code -->	
+<script>
+
+jQuery(document).ready(function(e) {
+	var offset = jQuery(':target').offset();
+	var scrollto = offset.top - 500; // minus fixed header height
+	jQuery('html, body').animate({scrollTop:scrollto}, 0);
+})
+
+</script>
+
+<script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'10048077'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+
+</head>
+<body>
+<a href="#" class="gotop"></a>
+<div class="header">
+  <div class="logobarbg">
+    <div class="logobar">
+      <a href="https://www.taishinbank.com.tw" class="logo" target="_blank" alt="台新銀行"></a>
+    
+             <div id="main-slide">
+          <div class="ts_navbar">
+	       
+      </div></div>
+    <div id="main-slide2">
+    <div class="menubar">
+<div clss="menubar1"></div>
+    <div class="menubar2"></div>
+    </div>
+    <div class="menu">
+    <a href="index.html#s1m"><div class="menu1"></div></a>
+    <a href="index.html#s2m"><div class="menu2"></div></a>
+    <a href="index.html#s3m"><div class="menu3"></div></a>
+    <a href="index.html#s4m"><div class="menu4"></div></a>
+	<a href="index.html#s5m"><div class="menu5"></div></a>
+    </div></div>
+     </div>  
+  </div>
+</div>
+
+<!-- pc -->
+
+<div id="main-slide">
+  <!-- kv -->
+  
+  <div id="sky">
+<div class="kv">
+ <div class="vi"></div>
+</div></div>
+<div id="page">
+<div class="page1"></div>	
+</div>
+<div id="page2">
+
+	
+	<!--好禮１ -->
+	<div class="page2"><img src="images/p_02.png"  alt="" width="100%"/>	
+	  
+    <a href="http://rtqms.taishinbank.com.tw/questionnaire/NzYx"><img src="images/p_07.png" width="100%" border="0"></a></div>
+
+<!--好禮2 -->
+<div class="page2">	
+  <img src="images/p_08.png" width="100%"></div>
+
+	<!--任務3 -->
+	<div class="page2">	
+  <img src="images/p_09.png" width="100%"></div>	
+
+<!--最終加碼 -->
+<div class="page2">	
+<div id="le" >
+ <tr>
+   <td><div align="right"><a href="a">
+    <img id="image1" src="images/p_10-1.png" width="360" height="90"></a><a href="b"><img id="image2" src="images/p_10-2.png" width="288" height="90" ></a><a href="c"><img id="image3" src="images/p_10-3.png" width="352" height="90"></a></div></td>
+</div>
+</div>	
+</div>
+
+	
+<!-- 注意事項 -->
+<div class="page2"><img src="images/p_11.png" width="100%"></div>	
+	
+<!-- 警語 -->
+<div class="gray">
+<div class="z"></div></div>
+<div id="TS-footer">
+          <div class="footer-fluid">
+            <div class="row">
+              <div class="ts-ft-L"><img src="images/footer_l.png" width="450" height="40" alt=""/></div>
+              <div class="ts-ft-R"><img src="images/logo_r.png" alt="台新金控" width="139" height="40"></div>
+            </div>
+
+</div></div>
+</div>
+
+
+<!-- mobile -->
+
+<div id="main-slide2">
+ 			  
+		  
+			  
+<!-- kv -->
+	
+	
+	
+<div class="kv_vm">	
+	
+<img src="images/m_02.png" width="100%" >
+</div>	
+<div class="page1m"></div>
+<!--問券入口 -->		
+
+  
+<div class="page1m"></div>
+
+	
+<!--好禮１ -->
+<div class="page1m"><img src="images/m_05.png" width="100%"/></div>
+
+<!--好禮２ -->
+<div class="page1m"><img src="images/m_06.png" width="100%"/></div>
+
+<!--好禮３ -->
+<div class="page1m"><img src="images/m_07.png" width="100%"/></div>
+	
+<!--最終加碼 -->
+<div class="page1m"><img src="images/m_08.png" width="100%"/></div>
+	
+<!-- 注意事項 -->
+<div class="page1m"><img src="images/m_09.png" width="100%"/></div>
+<div class="page1m"><img src="images/m_10.png" width="100%"/></div>
+<div class="page1m"><img src="images/m_11.png" width="100%"/></div>
+	<!-- 利率 -->
+	<div class="sp_m"></div>
+<div id="footerbg_m">
+  <img src="images/footer_m.png" width="100%"> </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+  //button1
+  if (localStorage.getItem("click_status1")== "1") 
+  {
+    $("#image1").attr("src","./images/IK_05.png");
+  }
+  //button2
+
+  if (localStorage.getItem("click_status2")== "1") 
+  {
+    $("#image2").attr("src","./images/IK_06.png");
+  }
+  //button3
+
+  if (localStorage.getItem("click_status3")== "1") 
+  {
+    $("#image3").attr("src","./images/IK_07.png");
+  }
+
+  $("#image1").click(function(){
+
+    if (localStorage.getItem("click_status1")!== "1") 
+    {
+      localStorage.setItem("click_status1", "1");
+      console.log("1")
+    }
+
+  })
+  $("#image2").click(function(){
+
+    if (localStorage.getItem("click_status2")!== "1") 
+    {
+      localStorage.setItem("click_status2", "1");
+      console.log("2")
+    }
+
+  })
+  $("#image3").click(function(){
+
+    if (localStorage.getItem("click_status3")!== "1") 
+    {
+      localStorage.setItem("click_status3", "1");
+    }
+
+  })
+</script>
+<script>
+// Check browser support
+// if (typeof(Storage) !== "undefined") {
+//     // Store
+//     localStorage.setItem("lastname", "Smith");
+//     // Retrieve
+//     document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+// } else {
+//     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+// }
+</script>
+
+</html>
+<!-- Localized -->
