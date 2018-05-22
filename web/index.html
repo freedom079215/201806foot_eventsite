@@ -428,17 +428,17 @@ jQuery(document).ready(function(e) {
 <div class="page1m"><img src="images/m_05.png" width="100%"/></div>
 
 <!--好禮２ -->
-<div class="page1m"><img src="images/m_06.png" width="100%"/></div>
+<div class="page1m"><img id="mimage1" src="images/m_06.png" width="100%"/></div>
 
 <!--好禮３ -->
 <div class="page1m"><img src="images/m_07.png" width="100%"/></div>
 	
 <!--最終加碼 -->
-<div class="page1m"><img src="images/m_08.png" width="100%"/></div>
+<div class="page1m"><img id="mimage2" src="images/m_08.png" width="100%"/></div>
 	
 <!-- 注意事項 -->
 <div class="page1m"><img src="images/m_09.png" width="100%"/></div>
-<div class="page1m"><img src="images/m_10.png" width="100%"/></div>
+<div class="page1m"><img id="mimage3" src="images/m_10.png" width="100%"/></div>
 <div class="page1m"><img src="images/m_11.png" width="100%"/></div>
 	<!-- 利率 -->
 	<div class="sp_m"></div>
@@ -467,6 +467,26 @@ jQuery(document).ready(function(e) {
     $("#image3").attr("src","./images/IK_07.png");
   }
 
+  //button4
+  if (localStorage.getItem("mclick_status1")== "1") 
+  {
+    $("#mimage1").attr("src","./images/mK_03.png");
+  }
+  //button5
+
+  if (localStorage.getItem("mclick_status2")== "1") 
+  {
+    $("#mimage2").attr("src","./images/mK_05.png");
+  }
+  //button6
+
+  if (localStorage.getItem("mclick_status3")== "1") 
+  {
+    $("#mimage3").attr("src","./images/mK_07.png");
+  }
+
+
+
   $("#image1").click(function(){
 
     if (localStorage.getItem("click_status1")!== "1") 
@@ -490,6 +510,33 @@ jQuery(document).ready(function(e) {
     if (localStorage.getItem("click_status3")!== "1") 
     {
       localStorage.setItem("click_status3", "1");
+    }
+
+  })
+
+  $("#mimage1").click(function(){
+
+    if (localStorage.getItem("mclick_status1")!== "1") 
+    {
+      localStorage.setItem("mclick_status1", "1");
+      console.log("1")
+    }
+
+  })
+  $("#mimage2").click(function(){
+
+    if (localStorage.getItem("mclick_status2")!== "1") 
+    {
+      localStorage.setItem("mclick_status2", "1");
+      console.log("2")
+    }
+
+  })
+  $("#mimage3").click(function(){
+
+    if (localStorage.getItem("mclick_status3")!== "1") 
+    {
+      localStorage.setItem("mclick_status3", "1");
     }
 
   })
