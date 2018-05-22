@@ -24,6 +24,84 @@
 	
 <!-- End Vpadn Analytics Menu收合區塊 Jquery碼 -->
 <script>
+	var a=document.createElement('a');
+	a.href=document.referrer;
+	//alert([a.protocol,a.host,a.pathname].join('\n'));
+	var path = a.pathname
+	//a.pathname = a.pathname.replace(/view.*?paper/g,"")
+	path = path.replace(/\/view\/paper\//g,"")
+	path = path.replace(/\//g,"")
+
+	//console.log('test'+ path)
+	console.log(path)
+	var q_no = path;
+	//alert("previous url is: " + window.history.previous.href);
+</script>
+<script>
+var $_GET = {};
+document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+function decode(s) {
+return decodeURIComponent(s.split("+").join(" "));
+}
+$_GET[decode(arguments[1])] = decode(arguments[2]);
+});
+</script>
+<script>
+function cID(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+// cust_no
+var cust_no = $_GET['utm_term'] ;
+if (cust_no == undefined){var cust_no = null ;}
+//console.log('cust_no:' + cust_no);
+// sas_cookie
+ if(cID("LisboaCSApersisted")!= null){ var sas_cookie = cID("LisboaCSApersisted").split("_")[2]; } 
+ if (sas_cookie == undefined){var sas_cookie = null ;} 
+//console.log('sas_cookie:'+ sas_cookie);
+// nbuuid
+ if (nbuuid == undefined){var nbuuid = null ;} 
+//console.log('nbuuid:'+ nbuuid);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74878556-1"></script>
+
+<script>
+  
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config','UA-74878556-1',{
+	  	'custom_map': {
+	  	     'dimension2': 'client_id'
+	  	 },
+		'cookie_expires':63072000,
+		'dimension1': cust_no,
+		'dimension3': sas_cookie,
+        'dimension4': nbuuid,
+        'dimension5': q_no	
+   });
+</script>
+
+<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker_nopd.js"></script>
+<script type="text/javascript">
+var dataJson={'subFolder':'taishin_activity1',
+'ecInfo':{
+'memberID': cust_no
+},
+'trackType':'view',
+'trackSubfolderDepth':1,
+'targetType':'usual',
+'source':'taishinbank'
+};
+ElandTracker.Track(dataJson);
+</script>
+
+<script type="text/javascript">
+	console.log('test'+ a.pathname)
+	a.pathname = a.pathname.replace(/\/view\/paper\//g,"")
         $(document).ready(function(){
             $(".menubar1").click(function () {
                 $(".menu").slideDown("slow");
@@ -209,20 +287,20 @@ $(function(){
 
 	<!-- Facebook Pixel Code -->
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '371902646606975');
+  // !function(f,b,e,v,n,t,s)
+  // {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  // n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  // if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  // n.queue=[];t=b.createElement(e);t.async=!0;
+  // t.src=v;s=b.getElementsByTagName(e)[0];
+  // s.parentNode.insertBefore(t,s)}(window, document,'script',
+  // 'https://connect.facebook.net/en_US/fbevents.js');
+  // fbq('init', '371902646606975');
   fbq('track', 'Lead');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+<!-- <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=371902646606975&ev=PageView&noscript=1"
-/></noscript>
+/></noscript> -->
 <!-- End Facebook Pixel Code -->
 
 	
