@@ -81,39 +81,8 @@ if (cust_no == undefined){var cust_no = null ;}
 //console.log('nbuuid:'+ nbuuid);
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74878556-1"></script>
 
-<script>
-  
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config','UA-74878556-1',{
-	  	'custom_map': {
-	  	     'dimension2': 'client_id'
-	  	 },
-		'cookie_expires':63072000,
-		'dimension1': cust_no,
-		'dimension3': sas_cookie,
-        'dimension4': nbuuid,
-        'dimension5': q_no	
-   });
-</script>
 
-<script src="//dmp.eland-tech.com/dmpreceiver/eland_tracker_nopd.js"></script>
-<script type="text/javascript">
-var dataJson={'subFolder':'taishin_activity1',
-'ecInfo':{
-'memberID': cust_no
-},
-'trackType':'view',
-'trackSubfolderDepth':1,
-'targetType':'usual',
-'source':'taishinbank'
-};
-ElandTracker.Track(dataJson);
-</script>
 
 <script type="text/javascript">
 	console.log('test'+ a.pathname)
